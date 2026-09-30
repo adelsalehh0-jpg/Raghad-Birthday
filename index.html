@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Raghad 💗</title>
+
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #fff0f6, #ffddea);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #7d3656;
+}
+
+/* الخلفية */
+.background {
+    position: fixed;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+/* الورود والقلوب */
+.flower,
+.heart,
+.sparkle {
+    position: absolute;
+    animation: floatUp linear infinite;
+    opacity: 0.8;
+}
+
+.flower {
+    font-size: 28px;
+}
+
+.heart {
+    font-size: 24px;
+}
+
+.sparkle {
+    font-size: 20px;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+    }
+
+    15% {
+        opacity: 0.9;
+    }
+
+    100% {
+        transform: translateY(-15vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* الصندوق */
+.container {
+    position: relative;
+    z-index: 5;
+    width: 90%;
+    max-width: 500px;
+    min-height: 430px;
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(12px);
+    border: 2px solid rgba(255,255,255,0.8);
+    border-radius: 35px;
+    box-shadow: 0 15px 45px rgba(170, 70, 110, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+}
+
+/* الصفحات */
+.page {
+    width: 100%;
+    animation: appear 0.7s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.title {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #a33f69;
+}
+
+.subtitle {
+    font-size: 20px;
+    margin-bottom: 35px;
+    color: #8e4965;
+}
+
+/* الأزرار */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+}
+
+button {
+    border: none;
+    padding: 14px 32px;
+    border-radius: 50px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.25s;
+    font-family: inherit;
+}
+
+.yes {
+    background: #ff7fab;
+    color: white;
+    box-shadow: 0 7px 18px rgba(255, 95, 145, 0.35);
+}
+
+.yes:hover {
+    transform: scale(1.08);
+}
+
+.no {
+    background: #fff;
+    color: #b04b70;
+    position: relative;
+}
+
+/* رسالة كفو */
+.success-title {
+    font-size: 32px;
+    color: #d34e7c;
+    margin-bottom: 18px;
+}
+
+.success-text {
+    font-size: 20px;
+    line-height: 1.8;
+}
+
+/* زر اضغطي هنا */
+.press {
+    margin-top: 25px;
+    background: linear-gradient(135deg, #ff77a8, #ff9bc0);
+    color: white;
+    box-shadow: 0 8px 20px rgba(255, 95, 145, 0.3);
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0%,100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.08);
+    }
+}
+
+/* البسة */
+.cat-area {
+    position: relative;
+    margin-top: 10px;
+}
+
+.cat {
+    font-size: 115px;
+    animation: catBounce 2s ease-in-out infinite;
+}
+
+@keyframes catBounce {
+    0%,100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+.cake {
+    position: relative;
+    margin: -5px auto 15px;
+    width: 180px;
+    height: 75px;
+    background: #ff9fc2;
+    border-radius: 15px 15px 25px 25px;
+    box-shadow: inset 0 -10px rgba(220, 100, 145, 0.15);
+    border: 3px solid #fff;
+}
+
+.cake::before {
+    content: "";
+    position: absolute;
+    width: 190px;
+    height: 28px;
+    background: #fff;
+    border-radius: 50%;
+    left: -8px;
+    top: -12px;
+}
+
+.cake-text {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    top: 20px;
+    left: 0;
+    font-size: 12px;
+    font-weight: bold;
+    color: #a3335c;
+}
+
+.candle {
+    position: absolute;
+    width: 10px;
+    height: 28px;
+    background: #ffda72;
+    top: -35px;
+    left: 85px;
+    border-radius: 5px;
+}
+
+.flame {
+    position: absolute;
+    top: -18px;
+    left: -3px;
+    font-size: 17px;
+}
+
+/* عبارة النهاية */
+.final-title {
+    color: #d04475;
+    font-size: 28px;
+    line-height: 1.5;
+    margin-top: 10px;
+}
+
+.final-sub {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* كونفيتي */
+.confetti {
+    position: fixed;
+    top: -20px;
+    font-size: 22px;
+    animation: confettiFall 4s linear forwards;
+    z-index: 20;
+}
+
+@keyframes confettiFall {
+    to {
+        transform: translateY(110vh) rotate(720deg);
+    }
+}
+
+/* للجوال */
+@media (max-width: 500px) {
+    .container {
+        min-height: 410px;
+        padding: 22px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .subtitle {
+        font-size: 18px;
+    }
+
+    .cat {
+        font-size: 95px;
+    }
+
+    .final-title {
+        font-size: 24px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- الخلفية المتحركة -->
+<div class="background" id="background"></div>
+
+<div class="container">
+
+    <!-- الصفحة الأولى -->
+    <div class="page" id="questionPage">
+
+        <div class="title">
+            أنتِ رغد؟ 👀💗
+        </div>
+
+        <div class="subtitle">
+            عندي سؤال مهم جدًا...
+        </div>
+
+        <div class="buttons">
+            <button class="yes" onclick="sayYes()">
+                إي 💗
+            </button>
+
+            <button class="no" id="noButton">
+                لا 😭
+            </button>
+        </div>
+
+    </div>
+
+
+    <!-- صفحة النجاح -->
+    <div class="page hidden" id="successPage">
+
+        <div style="font-size:70px;">
+            🎀✨
+        </div>
+
+        <div class="success-title">
+            كفوووو! 😭💗
+        </div>
+
+        <div class="success-text">
+            على تقديمك للمشروع 👩🏻‍💻✨
+            <br>
+            كنت متأكد إنك بتختارين الإجابة الصح 😌
+        </div>
+
+        <button class="press hidden" id="pressButton" onclick="showBirthday()">
+            اضغطي هنا 💗
+        </button>
+
+    </div>
+
+
+    <!-- صفحة عيد الميلاد -->
+    <div class="page hidden" id="birthdayPage">
+
+        <div class="cat-area">
+
+            <!-- بسة -->
+            <div class="cat">
+                🐱
+            </div>
+
+            <!-- الكيكة -->
+            <div class="cake">
+
+                <div class="candle">
+                    <div class="flame">🔥</div>
+                </div>
+
+                <div class="cake-text">
+                    🎂
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="final-title">
+            كل عام وأنتِ بخيررر 🎂💗
+        </div>
+
+        <div class="final-sub">
+            أتمنى تكون سنتك الجاية مليانة أشياء حلوة ✨🌸
+        </div>
+
+    </div>
+
+</div>
+
+
+<script>
+
+/* إنشاء الورود والقلوب في الخلفية */
+const background = document.getElementById("background");
+
+const decorations = [
+    "🌸",
+    "🌷",
+    "🌹",
+    "💗",
+    "💕",
+    "✨",
+    "🌺",
+    "💖"
+];
+
+for (let i = 0; i < 35; i++) {
+
+    const item = document.createElement("div");
+
+    item.className =
+        i % 3 === 0 ? "flower" :
+        i % 3 === 1 ? "heart" :
+        "sparkle";
+
+    item.innerText =
+        decorations[Math.floor(Math.random() * decorations.length)];
+
+    item.style.left = Math.random() * 100 + "%";
+
+    item.style.animationDuration =
+        (5 + Math.random() * 8) + "s";
+
+    item.style.animationDelay =
+        (Math.random() * 8) + "s";
+
+    item.style.fontSize =
+        (15 + Math.random() * 20) + "px";
+
+    background.appendChild(item);
+}
+
+
+/* زر لا يهرب */
+const noButton = document.getElementById("noButton");
+
+function moveNoButton() {
+
+    const maxX = window.innerWidth - noButton.offsetWidth - 20;
+    const maxY = window.innerHeight - noButton.offsetHeight - 20;
+
+    const x = Math.max(10, Math.random() * maxX);
+    const y = Math.max(10, Math.random() * maxY);
+
+    noButton.style.position = "fixed";
+    noButton.style.left = x + "px";
+    noButton.style.top = y + "px";
+}
+
+/* بالجوال عند اللمس، وبالكمبيوتر عند المرور */
+noButton.addEventListener("mouseenter", moveNoButton);
+noButton.addEventListener("touchstart", function(e) {
+    e.preventDefault();
+    moveNoButton();
+});
+
+
+/* عند اختيار إي */
+function sayYes() {
+
+    document.getElementById("questionPage")
+        .classList.add("hidden");
+
+    document.getElementById("successPage")
+        .classList.remove("hidden");
+
+    /* بعد 3 ثواني يظهر الزر */
+    setTimeout(function() {
+
+        document.getElementById("pressButton")
+            .classList.remove("hidden");
+
+    }, 3000);
+}
+
+
+/* صفحة عيد الميلاد */
+function showBirthday() {
+
+    document.getElementById("successPage")
+        .classList.add("hidden");
+
+    document.getElementById("birthdayPage")
+        .classList.remove("hidden");
+
+    createConfetti();
+}
+
+
+/* كونفيتي */
+function createConfetti() {
+
+    const pieces = [
+        "💗",
+        "💕",
+        "🌸",
+        "✨",
+        "🎀",
+        "🌷",
+        "💖"
+    ];
+
+    for (let i = 0; i < 45; i++) {
+
+        const confetti = document.createElement("div");
+
+        confetti.className = "confetti";
+
+        confetti.innerText =
+            pieces[Math.floor(Math.random() * pieces.length)];
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.animationDuration =
+            (2.5 + Math.random() * 3) + "s";
+
+        confetti.style.animationDelay =
+            Math.random() * 2 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+            confetti.remove();
+        }, 6000);
+    }
+}
+
+</script>
+
+</body>
+</html>
